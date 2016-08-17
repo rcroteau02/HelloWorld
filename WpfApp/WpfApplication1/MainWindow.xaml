@@ -5,22 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
+        Title="MainWindow" Height="250" Width="525">
+    <Grid Margin="15,15,15,15">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="15" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <GroupBox Grid.Row="0" Grid.Column="0" Header="Text fields" >
+        <GroupBox Grid.Row="0" Grid.Column="0" Header="Message" Grid.ColumnSpan="3" >
             <TextBlock Text="Hello World" x:Name="textfld" MinWidth="100" MinHeight="24" Margin="5,5,5,5" />
         </GroupBox>
-        <Button x:Name="HelloBtn" Grid.Row="1" Grid.Column="0"
-                Content="Hello" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="ByeBtn" Grid.Row="1" Grid.Column="1"
-                Content="Goodbye" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="HelloBtn" Grid.Row="2" Grid.Column="0"
+                Content="Hello" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75"
+                Click="HelloBtn_Click"/>
+        <Button x:Name="ByeBtn" Grid.Row="2" Grid.Column="2"
+                Content="Goodbye" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"
+                Click="ByeBtn_Click"/>
     </Grid>
 </Window>

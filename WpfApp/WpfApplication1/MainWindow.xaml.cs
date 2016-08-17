@@ -24,5 +24,15 @@ namespace WpfApplication1
         {
             InitializeComponent();
         }
+
+        private void HelloBtn_Click(object sender, RoutedEventArgs e)
+        {
+            textfld.Text = "Hello";
+        }
+
+        private void ByeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            textfld.Text = "Bye Bye!";
+        }
     }
 }
